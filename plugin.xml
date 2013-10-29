@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="com.obigo.plugins.iwamanager"
+    version="0.0.1">
+    <name>IWAManager</name>
+    <description>IWA Manager Plugin</description>
+    <license>MIT</license>
+    <keywords>cordova,iwamanager</keywords>
+    <repo>https://github.com/martimus/IWAManager-cordova-3.0-plugin.git</repo>
+    
+    <js-module src="www/iwamanager.js" name="iwamanager">
+        <clobbers target="manager.iwamanager" />
+    </js-module>
+    
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="IWAManager">
+                <param name="ios-package" value="IWAManager" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/IWAManager.h" />
+	    <source-file src="src/ios/IWAManager.m" />
+    </platform>
+</plugin>
