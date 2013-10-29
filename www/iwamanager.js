@@ -30,17 +30,6 @@ function IWAManager() {
     this.version = null;
 
     var me = this;
-
-    channel.onCordovaReady.subscribe(function() {
-        me.getInfo(function(info) {
-        	me.available = true;
-            me.platform = info.platform;
-            me.version = info.version;
-        },function(e) {
-            me.available = false;
-            utils.alert("[ERROR] Error initializing Cordova: " + e);
-        });
-    });
 }
 
 /**
