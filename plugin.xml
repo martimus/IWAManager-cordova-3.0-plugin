@@ -11,7 +11,6 @@
     <repo>https://github.com/martimus/IWAManager-cordova-3.0-plugin.git</repo>
     
     <js-module src="www/iwamanager.js" name="iwamanager">
-        <clobbers target="manager.iwamanager" />
     </js-module>
     
     <!-- ios -->
