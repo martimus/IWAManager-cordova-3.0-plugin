@@ -1,4 +1,3 @@
-cordova.define("com.obigo.iwamanager.IWAManager", function(require, exports, module) {
 /*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
@@ -20,26 +19,17 @@ cordova.define("com.obigo.iwamanager.IWAManager", function(require, exports, mod
  *
 */
 
-/**
- * 
- * @constructor
- */
-function IWAManager() {
-    this.available = false;
 
-    var me = this;
-}
+var IWAManager = {};
 
 /**
- * Get device info
+ * seed selected
  *
  * @param {Function} successCallback The function to call when the heading data is available
  * @param {Function} errorCallback The function to call when there is an error getting the heading data. (OPTIONAL)
  */
 IWAManager.seedSelected = function(successCallback, errorCallback, seedID, activityID) {
-    argscheck.checkArgs('fF', 'IWAManager.seedSelected', arguments);
-    exec(successCallback, errorCallback, "IWAManagerPlugin", "seedSelected", [seedID, activityID]);
+    cordova.exec(successCallback, errorCallback, "IWAManagerPlugin", "seedSelected", [seedID, activityID]);
 };
 
-module.exports = new IWAManager();
-});
+module.exports = IWAManager;
