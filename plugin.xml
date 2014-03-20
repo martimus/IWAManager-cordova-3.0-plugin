@@ -28,7 +28,7 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="IWAManagerPlugin">
-	            <param name="android-package" value="com.obigo.iwamanager"/>
+	            <param name="android-package" value="com.obigo.iwamanager.IWAManagerPlugin"/>
 	        </feature>
         </config-file>
         <source-file src="src/android/IWAManagerPlugin.java" target-dir="src/com/obigo/iwamanager" />
